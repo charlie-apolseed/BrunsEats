@@ -1,0 +1,1 @@
+const recentWeekLink = "/BrunsEats/weeks/week5.html";

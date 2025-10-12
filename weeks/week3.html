@@ -19,23 +19,23 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 fixed-top">
     <div class="container-fluid my-2 mx-4">
-        <a class="navbar-brand" href="/BrunsEats/">Café de PéPé</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/BrunsEats/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/weeks/week5html">Recent</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="/BrunsEats/">Café de PéPé</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/BrunsEats/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-recent-link>Recent</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 
   <!-- Main Content -->
   <div class="container-lg py-5">
@@ -50,17 +50,18 @@
         <h5 class="fs-5 fs-lg-3 mb-1 pt-2 pb-lg-3">Salmon, Roasted Potatoes, and Early Autumn Salad</h5>
         <em class="mb-4 pb-2 pb-lg-5 fs-6 fs-lg-5">Charlie & Ellen</em>
         <p class="fw-light fs-6 fs-lg-5 py-2 py-lg-4">
-          Wild caught salmon coated in a light but punchy mix of mustard and brown sugar. 
+          Wild caught salmon coated in a light but punchy mix of mustard and brown sugar.
           Pan seared to crisp the skin, then broiled in the oven to caramalize the glaze.
           <br>
           <br>
-          Golden potatoes salted and roasted to a light crisp. 
-          Tossed in a simple vinagrette of olive oil, red wine vinegar, and dijon mustard. 
+          Golden potatoes salted and roasted to a light crisp.
+          Tossed in a simple vinagrette of olive oil, red wine vinegar, and dijon mustard.
           Recipe curtesy of Salovaara family.
           <br>
           <br>
-          A base of arugula tossed in a homemade lemon-tahini dressing. 
-          Topped with roasted butternut squash, sauteed mushrooms, seared shallots, toasted pumpkin seeds, and crumbled goat cheese.
+          A base of arugula tossed in a homemade lemon-tahini dressing.
+          Topped with roasted butternut squash, sauteed mushrooms, seared shallots, toasted pumpkin seeds, and crumbled
+          goat cheese.
         </p>
       </div>
       <div class="col-10 col-md-4 mx-auto mb-3 mb-md-0">
@@ -74,7 +75,8 @@
         <h5 class="fs-5 fs-lg-3 mb-1 pb-lg-3">Plum Crumble</h5>
         <em class="mb-4 pb-2 pb-lg-5 fs-6 fs-lg-5">Will & Celeste</em>
         <p class="fw-light fs-6 fs-lg-5 py-2 py-lg-4">
-          A tart plum filling topped with a nutty, gluten free oat crumble. Served with a dollop of rich greek yogurt, this dessert was the perfect balance of sweet and tangy.
+          A tart plum filling topped with a nutty, gluten free oat crumble. Served with a dollop of rich greek yogurt,
+          this dessert was the perfect balance of sweet and tangy.
         </p>
       </div>
 
@@ -86,8 +88,18 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-  crossorigin="anonymous"></script>
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script src="/BrunsEats/config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const recentLink = document.querySelector('[data-recent-link]');
+      if (recentLink) {
+        recentLink.href = recentWeekLink;
+      }
+    });
+  </script>
 
 </body>
 

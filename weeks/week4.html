@@ -12,12 +12,13 @@
       padding-top: 80px;
       /* Prevent navbar overlay */
     }
+
     a {
       text-decoration: none;
       font-weight: 500;
-      color: rgb(50, 50, 202); 
+      color: rgb(50, 50, 202);
     }
-</style>
+  </style>
   </style>
 </head>
 
@@ -25,23 +26,23 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 fixed-top">
     <div class="container-fluid my-2 mx-4">
-        <a class="navbar-brand" href="/BrunsEats/">Café de PéPé</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/BrunsEats/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">About</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="/BrunsEats/">Café de PéPé</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/BrunsEats/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-recent-link>Recent</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 
   <!-- Main Content -->
   <div class="container-lg py-5">
@@ -61,21 +62,29 @@
           <br>
           <b class="fw-bold mb-2">Apricot Ice Cream</b>
           <br>
-          Julie and Charlie followed a <a href="https://www.babaganosh.org/apricot-ice-cream/" target="_blank">Babaganosh</a> recipe for the ice cream, but made various modifications to amplify the flavor. To begin, 
-          with no fresh apricots available, they used dried apricots and soaked them in boiling water for 30 minutes to rehydrate them. After adding the sugar and cooking the appricots down until syrupy, they 
-          blended them with a bit of milk to make a semi-smooth puree. The addition of a generous amount of cardamon, fresh squeezed orange juice, and lemon juice helped to brighten the flavor and add depth. 
+          Julie and Charlie followed a <a href="https://www.babaganosh.org/apricot-ice-cream/"
+            target="_blank">Babaganosh</a> recipe for the ice cream, but made various modifications to amplify the
+          flavor. To begin,
+          with no fresh apricots available, they used dried apricots and soaked them in boiling water for 30 minutes to
+          rehydrate them. After adding the sugar and cooking the appricots down until syrupy, they
+          blended them with a bit of milk to make a semi-smooth puree. The addition of a generous amount of cardamon,
+          fresh squeezed orange juice, and lemon juice helped to brighten the flavor and add depth.
           <br>
           <br>
           <b class="fw-bold mb-2">Orange Almond Olive Oil Cake</b>
           <br>
-          This delicious cake was from an <a href="https://www.cookingwithmanuela.com/2022/12/italian-gluten-free-almond-orange-cake.html" target="_blank">online recipe</a>. Doubling the orange zest while keeping the juice at the same level allowed for a stronger orange flavor without making the batter too wet. Naturally gluten free, this easy recipe was moist, flavorful, and delicious.
+          This delicious cake was from an <a
+            href="https://www.cookingwithmanuela.com/2022/12/italian-gluten-free-almond-orange-cake.html"
+            target="_blank">online recipe</a>. Doubling the orange zest while keeping the juice at the same level
+          allowed for a stronger orange flavor without making the batter too wet. Naturally gluten free, this easy
+          recipe was moist, flavorful, and delicious.
           <br>
           <br>
           <b class="fw-bold mb-2">Lemon Whipped Cream</b>
           <br>
           Cream, a sprinkle of sugar, and a squeeze of lemon juice made for a nice topping to connect the dishes.
           <br>
-          <br>  
+          <br>
         </p>
       </div>
       <div class="col-10 col-md-4 mx-auto mb-3 mb-md-0">
@@ -85,9 +94,18 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-  crossorigin="anonymous"></script>
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
+  <script src="/BrunsEats/config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const recentLink = document.querySelector('[data-recent-link]');
+      if (recentLink) {
+        recentLink.href = recentWeekLink;
+      }
+    });
+  </script>
 </body>
 
 </html>

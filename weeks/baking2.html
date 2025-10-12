@@ -16,7 +16,7 @@
     a {
       text-decoration: none;
       font-weight: 500;
-      color: rgb(50, 50, 202); 
+      color: rgb(50, 50, 202);
     }
   </style>
 </head>
@@ -25,23 +25,23 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 fixed-top">
     <div class="container-fluid my-2 mx-4">
-        <a class="navbar-brand" href="/BrunsEats/">Café de PéPé</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/BrunsEats/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-disabled="true">About</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="/BrunsEats/">Café de PéPé</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/BrunsEats/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-recent-link>Recent</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
 
   <!-- Main Content -->
   <div class="container-lg py-5">
@@ -59,23 +59,37 @@
           A rich and chocolatey cookie with a hint of umami and depth from browned butter.
           <br>
           <br>
-          These cookies loosely follow a <a href="https://butternutbakeryblog.com/miso-chocolate-chip-cookies/" target="_blank">Butternut Bakery</a> recipe. Browning the butter 
-          before mixing in the miso and sugars gives the cookies a deep, caramel-like flavor. We doubled the amount of miso to amp up the umami notes that balances the sweetness.
-          Using a roughly chopped dark chocolate bar lead to a more intersting texture and enjoyable eating experience. This recipe is still delicious when gluten free flour is substituted for regular flour.
+          These cookies loosely follow a <a href="https://butternutbakeryblog.com/miso-chocolate-chip-cookies/"
+            target="_blank">Butternut Bakery</a> recipe. Browning the butter
+          before mixing in the miso and sugars gives the cookies a deep, caramel-like flavor. We doubled the amount of
+          miso to amp up the umami notes that balances the sweetness.
+          Using a roughly chopped dark chocolate bar lead to a more intersting texture and enjoyable eating experience.
+          This recipe is still delicious when gluten free flour is substituted for regular flour.
           <br>
           <br>
           Made about 12 cookies for a midweek treat.
         </p>
       </div>
       <div class="col-10 col-md-4 mx-auto mb-3 mb-md-0">
-        <img src="../img/baking/miso-choc-chip.jpeg" class="img-fluid shadow-sm d-block mx-auto" alt="Miso Chocolate Chip Cookies">
+        <img src="../img/baking/miso-choc-chip.jpeg" class="img-fluid shadow-sm d-block mx-auto"
+          alt="Miso Chocolate Chip Cookies">
       </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-  crossorigin="anonymous"></script>
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script src="/BrunsEats/config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const recentLink = document.querySelector('[data-recent-link]');
+      if (recentLink) {
+        recentLink.href = recentWeekLink;
+      }
+    });
+  </script>
 
 </body>
 
