@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PP Recipes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 80px;
+            /* Prevent navbar overlay */
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            color: rgb(50, 50, 202);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 fixed-top">
+        <div class="container-fluid my-2 mx-4">
+            <a class="navbar-brand" href="/BrunsEats/">Café de PéPé</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/BrunsEats/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-recent-link>Recent</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-lg py-5">
+        <div class="text-center border-bottom">
+            <h3 class="fs-3 fs-lg-1 mb-1">PéPé Bakes - Epicuria Pregame</h3>
+            <em class="mb-4 d-block fs-6 fs-lg-4">Saturday, October 18, 2025</em>
+        </div>
+
+        <!-- Cookie 1 -->
+        <div class="row mt-5 pb-5 align-items-center">
+            <div class="col-12 col-md-8">
+                <h5 class="fs-5 fs-lg-3 mb-1 pt-2 pb-lg-3">Triple Sesame Tea Cookies</h5>
+                <em class="mb-4 pb-2 pb-lg-5 fs-6 fs-lg-5">Charlie</em>
+                <p class="fw-light fs-6 fs-lg-5 py-2 py-lg-4">
+                    Buttery, nutty, and subtly sweet, these cookies are the perfect crumbly tea-time treat.
+                    <br>
+                    <br>
+                    These cookies are based on a <a
+                        href="https://cooking.nytimes.com/recipes/1023792-triple-sesame-tea-cakes" target="_blank">New
+                        York Times</a> recipe. The three sesames - tahini, sesame oil, and sesame seeds - deepen the
+                    flavor and bring a nutty, buttery, taste to the cookies.
+                    Simple to make, yet delicious and elegant.
+                    <br>
+                    <br>
+                    Made roughly 50 cookies with a doubled recipe.
+                </p>
+            </div>
+            <div class="col-10 col-md-4 mx-auto mb-3 mb-md-0">
+                <img src="../img/baking/sesame-cookies.jpeg" class="img-fluid shadow-sm d-block mx-auto"
+                    alt="Sesame Cookies">
+            </div>
+        </div>
+
+        <!-- Cookie 2 -->
+        <div class="row mb-5 py-5 align-items-center bg-secondary bg-opacity-10">
+            <div class="col-12 col-md-8 order-1 order-md-2">
+                <h5 class="fs-5 fs-lg-3 mb-1 pb-lg-3">Date + Pecan Cookies</h5>
+                <em class="mb-4 pb-2 pb-lg-5 fs-6 fs-lg-5">Charlie + Mya</em>
+                <p class="fw-light fs-6 fs-lg-5 py-2 py-lg-4">
+                    Chewy and rich, these cookies are remiscent of a sticky toffee pudding.
+                    <br>
+                    <br>
+                    This recipe loosely followed a <a href="https://www.liveeatlearn.com/chewy-date-cookie/" target="_blank">Live
+                        Eat Learn</a> recipe. We added 1 tsp of caramom and 1/2 tsp of ginger to the dry ingredients to give
+                    the cookies a more complex, spiced flavor. In lieu of almonds, we increased the amount of pecans and dates. 
+                    Refridgerating the dough helped prevent spreading and led to a chewier texture.
+                    <br>
+                    <br>
+                    Made roughly 40 cookies with a doubled recipe. Substituting 3/4 gluten-free flour and 1/4 almond flour worked well for making them gluten-free!
+                </p>
+            </div>
+            <div class="col-10 col-md-4 mx-auto mb-3 mb-md-0 order-2 order-md-1">
+                <img src="../img/baking/date-pecan-cookies.jpeg" class="img-fluid shadow-sm d-block mx-auto"
+                    alt="Date Pecan Cookies">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="/BrunsEats/config.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const recentLink = document.querySelector('[data-recent-link]');
+            if (recentLink) {
+                recentLink.href = recentWeekLink;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
