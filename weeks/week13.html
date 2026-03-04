@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PP Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    body {
+      padding-top: 80px;
+      /* Prevent navbar overlay */
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: rgb(50, 50, 202);
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 fixed-top">
+    <div class="container-fluid my-2 mx-4">
+      <a class="navbar-brand" href="/BrunsEats/">Café de PéPé</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/BrunsEats/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-recent-link>Recent</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-lg py-5">
+    <div class="text-center border-bottom">
+      <h3 class="fs-3 fs-lg-1 mb-1">Café de PéPé - Week 12</h3>
+      <em class="mb-4 d-block fs-6 fs-lg-4">Sunday, March 1, 2026</em>
+    </div>
+
+    <!-- Dinner Row -->
+    <div class="row mt-5 pb-5 align-items-center">
+      <div class="col-12 col-md-8">
+        <h5 class="fs-5 fs-lg-3 mb-1 pt-2 pb-lg-3">Braised Beef Short Rib and Spring Risotto</h5>
+        <em class="mb-4 pb-2 pb-lg-5 fs-6 fs-lg-5">Charlie + Will + Oliver</em>
+        <p class="fw-light fs-6 fs-lg-5 py-2 py-lg-4">
+            Braised in a homemade stock with wine and mirpoix, the short rib was fall-off-the-bone tender after it had been in the oven for 3 hours. Rich, hearty, and deeply flavorful, the meat was worth the wait. 
+            <br>
+            <br>
+            The risotto was made with a blend of onions, asparagus, peas, and a generous amount of parmesan cheese. A perfect accompaniment to the short rib, the creamy risotto was a great way to lighten up the meal.
+            
+        </p>
+      </div>
+      <div class="col-10 col-md-4 mx-auto mb-3 mb-md-0">
+        <img src="../img/week-13/week13main1.jpeg" class="img-fluid shadow-sm d-block mx-auto" alt="Week 13 Main">
+      </div>
+    </div>
+
+    <div class="row mb-5 py-5 align-items-center bg-secondary bg-opacity-10">
+      <div class="col-12 col-md-8 order-1 order-md-2">
+        <h5 class="fs-5 fs-lg-3 mb-1 pb-lg-3">Fight-worthy Chocolate Cake</h5>
+        <em class="mb-4 pb-2 pb-lg-5 fs-6 fs-lg-5">Celeste + Julie + Ellen</em>
+        <p class="fw-light fs-6 fs-lg-5 py-2 py-lg-4">
+          Airy yet still intensely chocolatey, this cake was such a crowd pleaser that it caused a minor fight over the last slice. The whipped eggwhites helped make the cake lighter than a typical torte but still rich and decadent.
+        </p>
+      </div>
+
+      <div class="col-10 col-md-4 mx-auto mb-3 mb-md-0 order-2 order-md-1">
+        <img src="../img/week-13/week13dessert1.jpeg" class="img-fluid shadow-sm d-block mx-auto" alt="Fight-worthy Chocolate Cake">
+      </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script src="/BrunsEats/config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const recentLink = document.querySelector('[data-recent-link]');
+      if (recentLink) {
+        recentLink.href = recentWeekLink;
+      }
+    });
+  </script>
+
+</body>
+
+</html>

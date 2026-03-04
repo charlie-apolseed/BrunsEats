@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PP Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <style>
+    body {
+      padding-top: 80px;
+      /* Prevent navbar overlay */
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: rgb(50, 50, 202);
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 fixed-top">
+    <div class="container-fluid my-2 mx-4">
+      <a class="navbar-brand" href="/BrunsEats/">Café de PéPé</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/BrunsEats/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-recent-link>Recent</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container-lg py-5">
+    <div class="text-center border-bottom">
+      <h3 class="fs-3 fs-lg-1 mb-1">Café de PéPé - Week 11</h3>
+      <em class="mb-4 d-block fs-6 fs-lg-4">Sunday, February 15, 2026</em>
+    </div>
+
+    <!-- Dinner Row -->
+    <div class="row mt-5 pb-5 align-items-center">
+      <div class="col-12 col-md-8">
+        <h5 class="fs-5 fs-lg-3 mb-1 pt-2 pb-lg-3">Little Humans (Quails), and Root Vegetables</h5>
+        <em class="mb-4 pb-2 pb-lg-5 fs-6 fs-lg-5">Oliver Bruce</em>
+        <p class="fw-light fs-6 fs-lg-5 py-2 py-lg-4">
+            In yet another boundary defining meal, Oliver tested our friendship by serving a platter of roasted quails. While the appearance was nothing short of striking, everyone agreed that the quails were delicious. Drizzled with olive oil, salted and topped with rosemary, the little "peepers" as the chef likes to call them were roasted in the oven atop a bed of root vegetables braising in chicken broth. The result was a tender and flavorful meal that was unlike anything we've ever had before.
+        </p>
+      </div>
+      <div class="col-10 col-md-4 mx-auto mb-3 mb-md-0">
+        <img src="../img/week-11/week11main1.jpeg" class="img-fluid shadow-sm d-block mx-auto" alt="Week 11 Main">
+      </div>
+    </div>
+
+    <div class="row mb-5 py-5 align-items-center bg-secondary bg-opacity-10">
+      <div class="col-12 col-md-8 order-1 order-md-2">
+        <h5 class="fs-5 fs-lg-3 mb-1 pb-lg-3">Mango Sticky Rice</h5>
+        <em class="mb-4 pb-2 pb-lg-5 fs-6 fs-lg-5">Will + Julie</em>
+        <p class="fw-light fs-6 fs-lg-5 py-2 py-lg-4">
+          A Thai classic, Will and Julie's mango sticky rice was dense, satisfying and satiating. The sticky rice was perfectly cooked and the chef's decision to reduce the sugar led to a more balanced dish. The mangoes were suprisingly ripe and juicy, and the toasted coconut was a nice visual touch to bring together a lovely combination of flavors and textures. 
+        </p>
+      </div>
+
+      <div class="col-10 col-md-4 mx-auto mb-3 mb-md-0 order-2 order-md-1">
+        <img src="../img/week-11/week11dessert1.jpeg" class="img-fluid shadow-sm d-block mx-auto" alt="Mango Sticky Rice">
+      </div>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <script src="/BrunsEats/config.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const recentLink = document.querySelector('[data-recent-link]');
+      if (recentLink) {
+        recentLink.href = recentWeekLink;
+      }
+    });
+  </script>
+
+</body>
+
+</html>
