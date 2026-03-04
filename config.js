@@ -1,1 +1,1 @@
-const recentWeekLink = "/BrunsEats/weeks/week7.html";
+const recentWeekLink = "/BrunsEats/weeks/week9.html";
